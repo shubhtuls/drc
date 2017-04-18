@@ -102,7 +102,7 @@
 	hr
 	{
 		border: 0;
-		height: 1px;
+		height: 1.5px;
 		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 	}
 </style>
@@ -116,36 +116,42 @@
 
   <body>
     <br>
-          <center>
-          	<span style="font-size:42px">Multi-view Supervision for Single-view Reconstruction <br> via Differentiable Ray Consistency</span>
-						<br><br>
-	  		  <table align=center width=700px>
-	  			  <tr>
-							<td align=center width=100px>
-				<center>
-					<span style="font-size:20px"><a href="http://www.cs.berkeley.edu/~shubhtuls/">Shubham Tulsiani</a></span>
-					</center>
-					</td>
-							<td align=center width=100px>
-				<center>
-					<span style="font-size:20px"><a href="http://www.cs.berkeley.edu/~tinghuiz/">Tinghui Zhou</a></span>
-					</center>
-					</td>
-							<td align=center width=100px>
-		<center>
-			<span style="font-size:20px"><a href="http://www.eecs.berkeley.edu/~efros/">Alexei A. Efros</a></span>
-			</center>
-			</td>
-			<td align=center width=100px>
-<center>
-	<span style="font-size:20px"><a href="http://www.eecs.berkeley.edu/~malik/">Jitendra Malik</a></span>
+    <center>
+    <span style="font-size:42px">Multi-view Supervision for Single-view Reconstruction <br> via Differentiable Ray Consistency</span>
 	</center>
-	</td>
-			  </table>
-				<br>
+    
+	<br><br>
+  	<table align=center width=700px>
+  	 <tr>
+		<td align=center width=100px>
+		<center>
+		<span style="font-size:20px"><a href="http://www.cs.berkeley.edu/~shubhtuls/">Shubham Tulsiani</a></span>
+		</center>
+		</td>
 
-	  		  <table align=center width=400px>
-	  			  <tr>
+		<td align=center width=100px>
+		<center>
+		<span style="font-size:20px"><a href="http://www.cs.berkeley.edu/~tinghuiz/">Tinghui Zhou</a></span>
+		</center>
+		</td>
+
+		<td align=center width=100px>
+		<center>
+		<span style="font-size:20px"><a href="http://www.eecs.berkeley.edu/~efros/">Alexei A. Efros</a></span>
+		</center>
+		</td>
+
+		<td align=center width=100px>
+		<center>
+		<span style="font-size:20px"><a href="http://www.eecs.berkeley.edu/~malik/">Jitendra Malik</a></span>
+		</center>
+		</td>
+	 </tr>
+	</table>
+	<br>
+
+  	<table align=center width=400px>
+		<tr>
 	  	              <td align=center width=150px>
 	  					<center>
 	  						<span style="font-size:20px"><a href='https://github.com/shubhtuls/drc'> [GitHub]</a></span>
@@ -156,12 +162,9 @@
 	  						<span style="font-size:20px"><a href='#'> [Paper]</a></span>
 		  		  		</center>
 		  		  	  </td>
-			  </table>
-          </center>
-
-<!--   		  <br><br>
-		  <hr> -->
-
+  		</tr>
+	</table>
+          
   		  <br>
   		  <table align=center width=850px>
   			  <tr>
@@ -176,11 +179,10 @@
   	                	<span style="font-size:14px"><i>Sample results on ShapeNet dataset using multiple RGB images as supervision for training. We show the input image (left) and the visualize 3D shape predicted using our learned model from two novel views.</i>
 					</center>
   	              </td>
-
+  	          </tr>
   		  </table>
 
       	  <br>
-          <hr>
           We study the notion of consistency between a 3D shape and a 2D observation and propose a differentiable consistency formulation which allows computing gradients of the 3D shape given an observation from an arbitrary view. We do so by reformulating view consistency using a differentiable ray consistency (DRC) term. We show that this formulation can be incorporated in a learning framework to leverage varying kinds of multi-view observations e.g. foreground masks, depth, color images, semantics etc. as supervision for learning single-view 3D prediction. We present empirical analysis of our technique in a controlled setting as well as show that our approach allows us to improve over existing techniques for reconstructing objects in the PASCAL VOC dataset.
   		  <br><br>
 		  <hr>
@@ -286,7 +288,7 @@
 				</td>
 				</tr>
 
-				<tr height="300px">
+				<tr height="200px">
 					<td valign="top" width=400px>
 					<center>
 					<a href="./resources/images/csVis.png"><img img src = "./resources/images/csVis.png" height = "140px"></a><br>
@@ -297,14 +299,12 @@
 					<td  valign="top" width=400px>
 					<center>
 					<a href="./resources/images/sNetColorVis.png"><img img src = "./resources/images/sNetColorVis.png" height = "200px"></a><br>
-					<span style="font-size:14px">Sample results on ShapeNet dataset using multiple RGB images as supervision for training. a) Input image. b,c) Predicted 3D shape. </span>
+					<span style="font-size:14px">Sample results on ShapeNet dataset using multiple RGB images as supervision for training. a) Input image. b,c) Predicted 3D shape.</span>
 					</center>
 					</td>
 				</tr>
 			</table>
-		<hr>
 		<br>
-
 		<hr>
   		  <table align=center width=1100px>
   			  <tr>
@@ -315,7 +315,7 @@
 
 			</left>
 		</td>
-			 </tr>
+		</tr>
 		</table>
 
 		<br><br>
