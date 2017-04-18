@@ -1,0 +1,323 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+
+	h1 {
+		font-weight:300;
+	}
+
+	.disclaimerbox {
+		background-color: #eee;
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		        5px 5px 0 0px #fff, /* The second layer */
+		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		        10px 10px 0 0px #fff, /* The third layer */
+		        10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		        15px 15px 0 0px #fff, /* The fourth layer */
+		        15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		        20px 20px 0 0px #fff, /* The fifth layer */
+		        20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		        25px 25px 0 0px #fff, /* The fifth layer */
+		        25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		        5px 5px 0 0px #fff, /* The second layer */
+		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		        10px 10px 0 0px #fff, /* The third layer */
+		        10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+
+	.vert-cent {
+		position: relative;
+	    top: 50%;
+	    transform: translateY(-50%);
+	}
+
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+  <head>
+		<title>Differentiable Ray Consistency</title>
+		<meta property="og:image" content="http://shubhtuls.github.io/drc/resources/images/teaser.jpg"/>
+		<meta property="og:title" content="Differentiable Ray Consistency" />
+  </head>
+
+  <body>
+    <br>
+          <center>
+          	<span style="font-size:42px">Multi-view Supervision for Single-view Reconstruction <br> via Differentiable Ray Consistency</span>
+						<br><br>
+	  		  <table align=center width=700px>
+	  			  <tr>
+							<td align=center width=100px>
+				<center>
+					<span style="font-size:20px"><a href="http://www.cs.berkeley.edu/~shubhtuls/">Shubham Tulsiani</a></span>
+					</center>
+					</td>
+							<td align=center width=100px>
+				<center>
+					<span style="font-size:20px"><a href="http://www.cs.berkeley.edu/~tinghuiz/">Tinghui Zhou</a></span>
+					</center>
+					</td>
+							<td align=center width=100px>
+		<center>
+			<span style="font-size:20px"><a href="http://www.eecs.berkeley.edu/~efros/">Alexei A. Efros</a></span>
+			</center>
+			</td>
+			<td align=center width=100px>
+<center>
+	<span style="font-size:20px"><a href="http://www.eecs.berkeley.edu/~malik/">Jitendra Malik</a></span>
+	</center>
+	</td>
+			  </table>
+				<br>
+
+	  		  <table align=center width=400px>
+	  			  <tr>
+	  	              <td align=center width=150px>
+	  					<center>
+	  						<span style="font-size:20px"><a href='https://github.com/shubhtuls/drc'> [GitHub]</a></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align=center width=150px>
+	  					<center>
+	  						<span style="font-size:20px"><a href='#'> [Paper]</a></span>
+		  		  		</center>
+		  		  	  </td>
+			  </table>
+          </center>
+
+<!--   		  <br><br>
+		  <hr> -->
+
+  		  <br>
+  		  <table align=center width=850px>
+  			  <tr>
+  	              <td width=500px>
+  					<center>
+  	                	<a href="./resources/images/teaser.png"><img src = "./resources/images/teaser.png" height="300px"></img></href></a><br>
+					</center>
+  	              </td>
+                </tr>
+  	              <td width=400px>
+  					<center>
+  	                	<span style="font-size:14px"><i>Sample results on ShapeNet dataset using multiple RGB images as supervision for training. We show the input image (left) and the visualize 3D shape predicted using our learned model from two novel views.</i>
+					</center>
+  	              </td>
+
+  		  </table>
+
+      	  <br>
+          <hr>
+          We study the notion of consistency between a 3D shape and a 2D observation and propose a differentiable consistency formulation which allows computing gradients of the 3D shape given an observation from an arbitrary view. We do so by reformulating view consistency using a differentiable ray consistency (DRC) term. We show that this formulation can be incorporated in a learning framework to leverage varying kinds of multi-view observations e.g. foreground masks, depth, color images, semantics etc. as supervision for learning single-view 3D prediction. We present empirical analysis of our technique in a controlled setting as well as show that our approach allows us to improve over existing techniques for reconstructing objects in the PASCAL VOC dataset.
+  		  <br><br>
+		  <hr>
+
+	  <!-- NETWORK ARCHITECTURE, TRY THE MODEL -->
+ 		<center><h1>Code</h1></center>
+  		  <table align=center width=1000px>
+  			  <tr>
+  	              <td align=center width=750px>
+  					<center>
+						  <td><a href='https://github.com/shubhtuls/drc'><img class="round" style="height:160" src="./resources/images/formulation.png"/></a></td>
+	  		  		</center>
+	  		  	<!-- </br> -->
+			  </tr>
+		  </table>
+
+  		  <table align=center width=800px>
+			  <tr><center> <br>
+				<!-- <span style="font-size:28px">Code coming soon!</span></i>			  	 -->
+				<span style="font-size:28px">&nbsp;<a href='https://github.com/shubhtuls/drc'>[GitHub]</a>
+
+				<span style="font-size:28px"></a></span>
+			  <br>
+			  </center></tr>
+		  </table>
+      	  <br>
+		  <hr>
+
+  		  <!-- <table align=center width=550px> -->
+  		  <table align=center width=800>
+	 		<center><h1>Paper</h1></center>
+  			  <tr>
+  	              <!--<td width=300px align=left>-->
+  	              <!-- <a href="http://arxiv.org/pdf/1603.08511.pdf"> -->
+				  <td><a href="#"><img class="layered-paper-big" style="height:175px" src="./resources/images/paper.png"/></a></td>
+				  <td><span style="font-size:14pt">Tulsiani, Zhou, Efros, Malik.<br><br>
+                          Multi-view Supervision for Single-view Reconstruction <br>via Differentiable Ray Consistency.<br><br>
+				  In CVPR, 2017. <span style="font-weight:bold">(Oral)</span><br>
+				  <!-- [hosted on <a href="#">arXiv</a>]</a> -->
+				  <span style="font-size:4pt"><a href="#"><br></a>
+				  </span>
+				  </td>
+  	              </td>
+              </tr>
+  		  </table>
+		  <br>
+
+		  <table align=center width=180px>
+			  <tr>
+				  <td><span style="font-size:14pt"><center>
+				  	<a href="#">[arXiv]</a>
+  	              </center></td>
+
+				  <td><span style="font-size:14pt"><center>
+				  	<a href="./resources/bibtex.txt">[Bibtex]</a>
+  	              </center></td>
+              </tr>
+  		  </table>
+		  	<br>
+
+  		  	<hr>
+
+			<a name="applications"></a>
+			<center><h1>Applications</h1></center>
+			<!-- Our Differentiable Ray Consistency (DRC) formulation allows us to learn single-view 3D reconstruction using varying kinds of multi-view observations and can be applied to diverse settings.-->
+
+			<br><br>
+			<table align=center width=1100px>
+				<tr>
+					<td width=400px>
+						<center> <span align="top" style="font-size:20px">Multi-view Mask/Depth Supervision (ShapeNet)</a></span><br><br> </center>
+					</td>
+					<td width=50px> </td>
+					<td width=400px>
+						<center> <span align="top" style="font-size:20px">Single-view Mask Supervision (PASCAL VOC)</a></span><br><br> </center>
+					</td>
+				</tr>
+				<tr height="300px">
+					<td valign="top" width=400px>
+					<center>
+					<a href="./resources/images/sNetVis.png"><img img src = "./resources/images/sNetVis.png" height = "200px"></a><br>
+					<span style="font-size:14px">Sample results on ShapeNet dataset using multiple depth images as supervision for training. a) Input image. b,c) Predicted 3D shape. </span><br><br>
+					</center>
+					</td>
+
+					<td width=50px> </td>
+
+					<td  valign="top" width=400px>
+					<center>
+					<a href="./resources/images/pascalVis.png"><img img src = "./resources/images/pascalVis.png" height = "200px"></a><br>
+					<span style="font-size:14px">Sample results on PASCAL VOC dataset using pose and foreground masks as supervision for training. a) Input image. b,c) Predicted 3D shape. </span><br><br>
+					</center>
+					</td>
+				</tr>
+
+				<tr>
+				<td width=400px>
+					<center> <span align="top" style="font-size:20px">Driving Sequences as Multi-view Supervision (Cityscapes)</a></span><br><br> </center>
+				</td>
+				<td width=50px> </td>
+				<td width=400px>
+					<center> <span align="top" style="font-size:20px">Multi-view Color Images as Supervision (ShapeNet)</a></span><br><br> </center>
+				</td>
+				</tr>
+
+				<tr height="300px">
+					<td valign="top" width=400px>
+					<center>
+					<a href="./resources/images/csVis.png"><img img src = "./resources/images/csVis.png" height = "140px"></a><br>
+					<span style="font-size:14px">Sample results on Cityscapes dataset using multiple depth and semantic segmentation images seen in  driving sequences as supervision for training. a) Input image. b,c) Predicted 3D shape visualized by rendering inferred depth and semantics under simulated forward motion.</span>
+					</center>
+					</td>
+					<td width=50px> </td>
+					<td  valign="top" width=400px>
+					<center>
+					<a href="./resources/images/sNetColorVis.png"><img img src = "./resources/images/sNetColorVis.png" height = "200px"></a><br>
+					<span style="font-size:14px">Sample results on ShapeNet dataset using multiple RGB images as supervision for training. a) Input image. b,c) Predicted 3D shape. </span>
+					</center>
+					</td>
+				</tr>
+			</table>
+		<hr>
+		<br>
+
+		<hr>
+  		  <table align=center width=1100px>
+  			  <tr>
+  	              <td>
+  					<left>
+	  		  <center><h1>Acknowledgements</h1></center>
+	  		  We thank the anonymous reviewers for helpful comments. This work was supported in part by Intel/NSF VEC award IIS-1539099, NSF Award IIS-1212798, and the Berkeley Fellowship  to ST. We gratefully acknowledge NVIDIA corporation for the donation of Tesla GPUs used for this research. This webpage template was borrowed from some <a href="https://richzhang.github.io/colorization/">colorful folks</a>.
+
+			</left>
+		</td>
+			 </tr>
+		</table>
+
+		<br><br>
+</body>
+</html>

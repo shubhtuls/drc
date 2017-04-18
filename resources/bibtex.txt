@@ -1,0 +1,6 @@
+@inProceedings{drcTulsiani17,
+  title={Multi-view Supervision for Single-view Reconstruction via Differentiable Ray Consistency},
+  author = {Shubham Tulsiani and Tinghui Zhou and and Alexei A. Efros and Jitendra Malik},
+  booktitle={Computer Vision and Pattern Regognition (CVPR)},
+  year={2017}
+}
