@@ -110,7 +110,7 @@
 <html>
   <head>
 		<title>Differentiable Ray Consistency</title>
-		<meta property="og:image" content="http://shubhtuls.github.io/drc/resources/images/teaser.jpg"/>
+		<meta property="og:image" content="http://shubhtuls.github.io/drc/resources/images/teaserChair.png"/>
 		<meta property="og:title" content="Differentiable Ray Consistency" />
   </head>
 
@@ -148,9 +148,31 @@
 		</td>
 	 </tr>
 	</table>
-	<br>
 
-  	<table align=center width=400px>
+	<br>
+	<table align=center width=700px>
+  	 <tr>
+		<td align=center width=100px>
+		<center>
+		<span style="font-size:20px">University of California, Berkeley</span>
+		</center>
+		</td>
+	 </tr>
+	</table>
+
+	<table align=center width=700px>
+  	 <tr>
+		<td align=center width=100px>
+		<center>
+		<span style="font-size:20px">In CVPR, 2017</span>
+		</center>
+		</td>
+	 </tr>
+	</table>
+
+	<!--
+
+	<table align=center width=400px>
 		<tr>
 	  	              <td align=center width=150px>
 	  					<center>
@@ -164,26 +186,27 @@
 		  		  	  </td>
   		</tr>
 	</table>
-          
+
+	-->          
   		  <br>
   		  <table align=center width=850px>
   			  <tr>
   	              <td width=500px>
   					<center>
-  	                	<a href="./resources/images/teaser.png"><img src = "./resources/images/teaser.png" height="300px"></img></href></a><br>
+  	                	<a href="./resources/images/teaserChair.png"><img src = "./resources/images/teaserChair.png" height="250px"></img></href></a><br>
 					</center>
   	              </td>
                 </tr>
   	              <td width=400px>
   					<center>
-  	                	<span style="font-size:14px"><i>Sample results on ShapeNet dataset using multiple RGB images as supervision for training. We show the input image (left) and the visualize 3D shape predicted using our learned model from two novel views.</i>
+  	                	<span style="font-size:14px"><i> <span style="font-weight:bold">Left</span>: We measure the consistency between a (predicted) 3D shape and an observation image using a differentiable ray consistency formulation. <span style="font-weight:bold">Right</span>: Sample results obtained by applying our framework on ShapeNet dataset using multiple RGB images as supervision for training. We show the  RGB image and the visualize the 3D shape predicted using our learned model from two novel views.</i>
 					</center>
   	              </td>
   	          </tr>
   		  </table>
 
       	  <br>
-          We study the notion of consistency between a 3D shape and a 2D observation and propose a differentiable consistency formulation which allows computing gradients of the 3D shape given an observation from an arbitrary view. We do so by reformulating view consistency using a differentiable ray consistency (DRC) term. We show that this formulation can be incorporated in a learning framework to leverage varying kinds of multi-view observations e.g. foreground masks, depth, color images, semantics etc. as supervision for learning single-view 3D prediction. We present empirical analysis of our technique in a controlled setting as well as show that our approach allows us to improve over existing techniques for reconstructing objects in the PASCAL VOC dataset.
+          We study the notion of consistency between a 3D shape and a 2D observation and propose a differentiable formulation which allows computing gradients of the 3D shape given an observation from an arbitrary view. We do so by reformulating view consistency using a differentiable ray consistency (DRC) term. We show that this formulation can be incorporated in a learning framework to leverage different types of multi-view observations e.g. foreground masks, depth, color images, semantics etc. as supervision for learning single-view 3D prediction. We present empirical analysis of our technique in a controlled setting. We also show that this approach allows us to improve over existing techniques for single-view reconstruction of objects from the PASCAL VOC dataset.
   		  <br><br>
 		  <hr>
 		 <!-- <table align=center width=550px> -->
