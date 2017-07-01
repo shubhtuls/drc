@@ -36,13 +36,6 @@ params.voxelsDir = '../cachedir/shapenet/modelVoxels/' .. params.synset .. '/'
 params.imgSize = torch.Tensor({params.imgSizeX, params.imgSizeY})
 params.gridSize = torch.Tensor({params.gridSizeX, params.gridSizeY, params.gridSizeZ})
 print(params)
-
-debug_cam_ready = true
-if debug_cam_ready then
-    params.snapshotDir = '../../sceneVoxels/cachedir/snapshots/shapenet/' .. params.name
-    params.modelsDataDir = '../../sceneVoxels/cachedir/blenderRenderPreprocess/' .. params.synset .. '/'
-    params.voxelsDir = '../../sceneVoxels/cachedir/shapenet/modelVoxels/' .. params.synset .. '/'
-end
 -----------------------------
 -----------------------------
 params.saveDir = '../cachedir/resultsDir/shapenet/' .. params.name .. '_' .. tostring(params.numTrainIter) .. '_' .. params.evalSet
