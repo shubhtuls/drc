@@ -42,6 +42,7 @@ local function writeObj(meshFile, vertices, faces)
     mtlFileHandle:write(string.format('Ka %f %f %f\n', cVal, cVal, cVal))
     mtlFileHandle:write(string.format('Kd %f %f %f\n', cVal, cVal, cVal))
     mtlFileHandle:write('Ks 1 1 1\n')
+    mtlFileHandle:write(string.format('illum %d\n',9))
     mtlFileHandle:close()
     
     mtlFile = mtlFile:split('/')
