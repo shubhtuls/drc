@@ -1,12 +1,9 @@
 demo/data
-visualization/pascalResults
 *.sh
 torchNb/
-geometry/rpModule/build/
-rayUtils/rayPotentialOccupancy.lua
+drcLoss/build/
 external
 *.timedBar/
-experiments/synthetic/gradDescentDebug.lua
 *ipynb_checkpoints
 cachedir
 *.ipynb
