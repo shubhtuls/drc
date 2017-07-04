@@ -10,7 +10,7 @@ Please check out the [interactive notebook](../demo/demo.ipynb) which shows reco
 ## Pre-processing
 Download the annotations for segmentation masks for objects in PASCAL3D from [here (80MB)](https://people.eecs.berkeley.edu/~shubhtuls/cachedir/drc/pascalData.tar.gz) - the segmentations for instances in PASCAL VOC are from annotations by Hariharan et. al. and the ones for ImageNet instances were computed using a pre-trained 'Iterative Instance Segmentation (IIS)' model. Extract the contents of this tar file in 'cachedir/pascal/'.
 
-For training, we need to extract orthographic cameras from the PASCAL3D dataset. For evaluation, we need the ground-truth PASCAL3D models. To compute these, first modify the dataset paths in the [startup file](../preprocess/pascal/startup.m) and then run in matlab from within the directory 'preprocess/pascal':
+For training, we need to extract orthographic cameras from the PASCAL3D dataset. For evaluation, we need the ground-truth PASCAL3D models. To compute these, first download the [PASCAL3D dataset](http://cvgl.stanford.edu/projects/pascal3d.html) (release1.1), the [PASCAL VOC](http://host.robots.ox.ac.uk/pascal/VOC/) and [ShapeNet dataset](https://www.shapenet.org/) (V1.1) and edit the paths in [startup file](../preprocess/pascal/startup.m) to point to these. Then run in matlab from within the directory 'preprocess/pascal':
 ```
 % This might take an hour
 classes = {'aeroplane','car','chair'};
