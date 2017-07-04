@@ -22,6 +22,14 @@ luarocks make rpsem-alpha-1.rockspec
 ## Training and Evaluating
 For training your own models and evaluating those, or for reproducing the main experiments in the paper, please see the detailed README files for [PASCAL3D](docs/pascal.md) or [ShapeNet](docs/snet.md).
 
+## Additional Dependencies
+You'll need to install some additional dependencies (json and matio).
+```
+sudo apt-get install libmatio2
+luarocks install matio
+luarocks install json
+```
+
 ### Citation
 If you use this code for your research, please consider citing:
 ```
