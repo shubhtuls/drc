@@ -20,6 +20,7 @@ for c=1:3
 end
 precomputeVoxelsP3d;
 ```
+Note that you'll need the Matlab Aerospace toolbox for this step. In case you don't have it installed, you could use some online implementations of the angle2dcm function e.g. [here](https://github.com/su2code/MeshTools/blob/master/Matlab/angle2dcm.m).
 
 ## Evaluation
 To evaluate the trained (or downloaded) models, run
