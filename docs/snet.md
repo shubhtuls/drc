@@ -45,7 +45,7 @@ synset=2691156 th synthetic/noisyDepth.lua #aero
 ```
 
 ## Computing Voxelizations
-For evaluation and training the 3D-supervised baseline, we need to compute the groun-truth 3D voxelizations. First, modify the path to ShapeNetV1 [here]('../preprocess/synthetic/voxelization/startup.m') and then run
+For evaluation and training the 3D-supervised baseline, we need to compute the groun-truth 3D voxelizations. First, modify the path to ShapeNetV1 [here](../preprocess/synthetic/voxelization/startup.m) and then run
 ```
 #Computing Gt Voxelizations
 cd preprocess/synthetic/voxelization
